@@ -17,12 +17,12 @@ int print_sign(int n)
 	}
 	if (n == 0)
 	{
-	_putchar('0')
+	_putchar('0');
 	answer = 0;
 	}
 	if (n < 0)
 	{
-	_putchar('-')
+	_putchar('-');
 	answer = -1
 	}
 	return (answer);
