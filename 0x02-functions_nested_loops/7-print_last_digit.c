@@ -5,7 +5,7 @@
  * @n: input.
  * Return: last digit of a number
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
 	int lastDigit;
 
