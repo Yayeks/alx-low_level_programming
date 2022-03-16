@@ -7,7 +7,7 @@ int main(void)
 {
 	long int i, x = 1, y = 2, sum = 0;
 
-	for (i = 0; i < 94; i++)
+	for (i = 2; i < 94; i++)
 	{
 	printf("%lu, ", x);
 	sum = x + y;
