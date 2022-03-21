@@ -8,8 +8,6 @@
  */
 void _puts(char *str)
 {
-	const char *p2;
 	
-	*p2 = *str;
-	puts( *p2);
+	puts(const char \**str);
 }
