@@ -9,7 +9,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	memset(dest, '\0', sizeof(dest));
+	memset(dest, '\0');
 	strcpy(dest, src);
 	return(dest);
 }
