@@ -8,5 +8,7 @@
  */
 void _puts(char *str)
 {
-	puts( *str);
+	const char **p2 = &str;
+
+	puts( *p);
 }
