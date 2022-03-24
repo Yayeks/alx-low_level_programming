@@ -33,6 +33,11 @@ char *cap_string(char *m)
 	continue;
 	}
 	}
+	else
+	{
+	if (m[i] >= 'A' && m[i] <= 'Z')
+	m[i] = m[i] + 32;
+	}
 	}
 	return (m);
 }
