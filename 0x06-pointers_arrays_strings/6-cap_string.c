@@ -11,33 +11,24 @@ char *cap_string(char *m)
 	int i;
 
 	/* capitalize first character of words */
-	for (i = 0; m[i] != '\0'; i++)
+	i = 0;
+	while (m[i] != '\0')
 	{
-	if (i == 0)
+	if (m[0] >= 97 && m[0] <= 122)
 	{
-	if ((m[i] >= 'a' && m[i] <= 'z'))
-	{
-	m[i] = m[i] - 32;
-	continue;
-	}
+	m[0] = m[0] - 32;
 	}
 	if (m[i] == ' ' || m[i] == '\t' || m[i] == '\n' || m[i] == ','
 			|| m[i] == ';' || m[i] == '.' || m[i] == '!'
 			|| m[i] == '?' || m[i] == '"' || m[i] == '('
 			|| m[i] == ')' || m[i] == '{' || m[i] == '}')
 	{
-	++i;
-	if (m[i] >= 'a' && m[i] <= 'z')
+	if (m[i + 1] >= 97 && m[i + 1] <= 122)
 	{
-	m[i] = m[i] - 32;
-	continue;
+	m[i + 1] = m[i + 1] - 32;
 	}
 	}
-	else
-	{
-	if (m[i] >= 'A' && m[i] <= 'Z')
-	m[i] = m[i] + 32;
-	}
+	i++;
 	}
 	return (m);
 }
