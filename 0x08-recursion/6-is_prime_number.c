@@ -4,6 +4,10 @@
  * @n: number to check
  * Return: int
  */
+int is_prime_number(int n)
+{
+	return (div(n, 2));
+}
 /**
  * div - check for prime
  * @n: number
@@ -20,7 +24,7 @@ int div(int n, int x)
 	{
 	if (n % x != 0)
 	{
-	return (div(n, x+1));
+	return (div(n, x + 1));
 	}
 	else
 	{
@@ -31,8 +35,4 @@ int div(int n, int x)
 	{
 	return (1);
 	}
-}
-int is_prime_number(int n)
-{
-	return (div(n, 2));
 }
