@@ -7,7 +7,7 @@
 int square(int n, int x);
 int _sqrt_recursion(int n)
 {
-	return (square(n, 0));
+	return (square(n, 1));
 }
 /**
  * square - checks if square of x is n
