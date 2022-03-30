@@ -15,7 +15,7 @@ int div(int n, int x)
 	if (n % x != 0)
 	return (div(n, x+1));
 	else
-	return (0)
+	return (0);
 	}
 	else
 	return (1);
