@@ -11,6 +11,7 @@ int _sqrt_recursion(int n)
 }
 /**
  * square - checks if square of x is n
+ * @n: number
  * @x: value to check
  * Return: int
  */
