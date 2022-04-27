@@ -6,12 +6,11 @@
  */
 void print_times_table(int n)
 {
-	int i, j, k, product;
+	int i, k, product;
 
-	j = n + 1;
-	for (i = 0; i < j; i++)
+	for (i = 0; i++; i <= n)
 	{
-	for (k = 0; k < j; k++)
+	for (k = 0; k++; k <= n)
 	{
 	if ((n > 15) || (n < 0))
 	{
@@ -20,31 +19,24 @@ void print_times_table(int n)
 	else
 	{
 	product = i * k;
-	if (k == 0)
+	if (product < 10)
+		_putchar('0' + product);
+	else if (product < 100)
 	{
-	_putchar('0' + product);
-	}
-	else if (product >= 10)
-	{
-	_putchar(' ');
-	_putchar('0' + (product / 10));
-	_putchar('0' + (product % 10));
-	}
-	else if (product >= 100)
-	{
-	_putchar('0' + (product / 100));
-	_putchar('0' + ((product / 10) % 10));
-	_putchar('0' + (product % 10));
+		_putchar(' ');
+		_putchar('0' + (product / 10));
+		_putchar('0' + (product % 10));
 	}
 	else
 	{
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(product + '0');
+		_putchar('0' + (product / 100));
+		_putchar('0' + ((product / 10) % 10));
+		_putchar('0' + (product % 10));
 	}
 	if (k != n)
 	{
-	_putchar(',');
+		_putchar(',');
+		_putchar(' ');
 	}
 	}
 	}
