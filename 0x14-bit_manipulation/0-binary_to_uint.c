@@ -6,15 +6,16 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int len = 0, unsigned int no = 0;
+	unsigned num;
 
-	if (b[len] == '\0')
-		return (0);
-	while ((b[len] == '0') || (b[len] == '1'))
+	for (num = 0; *b; b++)
 	{
-		no <<= 1;
-		no += b[len] - '0';
-		len++;
+		if (*b == '1')
+			num = (num << 1) | 1;
+		else if (*b == '0')
+			num <<= 1;
+		else
+			break;
 	}
-	return (no);
+	return (num);
 }
