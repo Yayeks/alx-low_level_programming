@@ -15,8 +15,10 @@ unsigned int binary_to_uint(const char *b)
 		else if (*b == '0')
 			num <<= 1;
 		else
+		{
 			return (0);
 			break;
+		}
 	}
 	return (num);
 }
