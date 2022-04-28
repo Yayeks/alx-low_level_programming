@@ -3,7 +3,7 @@
  * print_binary - print the binary rep of number
  * @n: the number to be interpreted
  */
-void print_binary(unsigned long int)
+void print_binary(unsigned long int n)
 {
 	if (n > 1)
 		print_binary(n >> 1);
