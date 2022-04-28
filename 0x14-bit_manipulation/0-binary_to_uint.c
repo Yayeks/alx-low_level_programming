@@ -11,10 +11,11 @@ unsigned int binary_to_uint(const char *b)
 	for (num = 0; *b; b++)
 	{
 		if (*b == '1')
-			num = (num << 1) | 1;
+			num = ((num << 1) | 1);
 		else if (*b == '0')
 			num <<= 1;
 		else
+			return (0);
 			break;
 	}
 	return (num);
