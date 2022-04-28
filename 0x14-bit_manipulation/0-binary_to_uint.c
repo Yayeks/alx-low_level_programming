@@ -12,9 +12,9 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	while ((b[len] == '0' || b[len] == '1'))
 	{
-		num <<= 1;
-		num += b[len] - '0';
+		no <<= 1;
+		no += b[len] - '0';
 		len++;
 	}
-	return (num);
+	return (no);
 }
