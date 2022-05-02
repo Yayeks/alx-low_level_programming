@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * create_file - Creates a file
  * @filename: A pointer to the name of the file to create
@@ -12,11 +11,10 @@ int create_file(const char *filename, char *text_content)
 
 	len = 0;
 	if (filename == NULL)
-		return (0);
-
+		return (-1);
 	if (text_content != NULL)
 	{
-		for (len, text_content[len];)
+		for (len = 0; text_content[len];)
 			len++;
 	}
 
