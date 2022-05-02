@@ -18,6 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (stash == NULL)
 		return (0);
+
 	o = open(filename, O_RDONLY);
 	r = read(o, stash, letters);
 	w = write(STDOUT_FILENO, stash, r);
