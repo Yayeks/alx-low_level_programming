@@ -24,7 +24,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	w = write(STDOUT_FILENO, stash, r);
 
 	if (o == -1 || r == -1 || w == -1 || w != r)
+	{
+		free(stash);
 		return (0);
+	}
 
 	free(stash);
 	close(o);
