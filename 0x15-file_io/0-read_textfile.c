@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * read_textfile - Reads a text file and prints it to POSIX stdout
- * @filename: A pointer to the name of the file
- * @letters: The number of letters the function should read and print
- * Return: If the function fails or filename is NULL - 0.
+ * read_textfile - Reads text file and prints
+ * @filename: A pointer to the name of file
+ * @letters: the letters
+ * Return: 0 if file cannot be opened
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -13,7 +13,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-	
 	stash = malloc(sizeof(char) * letters);
 
 	if (stash == NULL)
